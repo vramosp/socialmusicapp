@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89C43741D1794971A7BFFDE0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FFC8AC9E8BD144D6B279E990 /* libPods.a */; };
+		D04B8CCE1928131500D113D1 /* JSTArtistSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D04B8CCD1928131500D113D1 /* JSTArtistSearchViewController.m */; };
+		D04B8CD31928155000D113D1 /* JSTMusicGraphAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = D04B8CD21928155000D113D1 /* JSTMusicGraphAPI.m */; };
 		D0AB2C9A19280FA500913CC0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AB2C9919280FA500913CC0 /* Foundation.framework */; };
 		D0AB2C9C19280FA500913CC0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AB2C9B19280FA500913CC0 /* CoreGraphics.framework */; };
 		D0AB2C9E19280FA500913CC0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AB2C9D19280FA500913CC0 /* UIKit.framework */; };
@@ -14,13 +17,15 @@
 		D0AB2CA619280FA500913CC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AB2CA519280FA500913CC0 /* main.m */; };
 		D0AB2CAA19280FA500913CC0 /* JSTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AB2CA919280FA500913CC0 /* JSTAppDelegate.m */; };
 		D0AB2CAD19280FA500913CC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0AB2CAB19280FA500913CC0 /* Main.storyboard */; };
-		D0AB2CB019280FA500913CC0 /* JSTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AB2CAF19280FA500913CC0 /* JSTViewController.m */; };
 		D0AB2CB219280FA500913CC0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0AB2CB119280FA500913CC0 /* Images.xcassets */; };
 		D0AB2CB919280FA500913CC0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AB2CB819280FA500913CC0 /* XCTest.framework */; };
 		D0AB2CBA19280FA500913CC0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AB2C9919280FA500913CC0 /* Foundation.framework */; };
 		D0AB2CBB19280FA500913CC0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AB2C9D19280FA500913CC0 /* UIKit.framework */; };
 		D0AB2CC319280FA500913CC0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0AB2CC119280FA500913CC0 /* InfoPlist.strings */; };
 		D0AB2CC519280FA500913CC0 /* SocialMusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AB2CC419280FA500913CC0 /* SocialMusicTests.m */; };
+		D0D6D0B01928251000BB3F0B /* JSTArtistAlbumListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D6D0AF1928251000BB3F0B /* JSTArtistAlbumListTableViewController.m */; };
+		D0D6D0B31928252D00BB3F0B /* JSTArtistSocialMentionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D6D0B21928252D00BB3F0B /* JSTArtistSocialMentionsTableViewController.m */; };
+		D0DA9FDA1928183A00789033 /* JSTAPIRequestsForwarding.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DA9FD91928183A00789033 /* JSTAPIRequestsForwarding.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		339EED816E444851A3A36DEA /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		D04B8CCC1928131500D113D1 /* JSTArtistSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTArtistSearchViewController.h; sourceTree = "<group>"; };
+		D04B8CCD1928131500D113D1 /* JSTArtistSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTArtistSearchViewController.m; sourceTree = "<group>"; };
+		D04B8CD11928155000D113D1 /* JSTMusicGraphAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTMusicGraphAPI.h; sourceTree = "<group>"; };
+		D04B8CD21928155000D113D1 /* JSTMusicGraphAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTMusicGraphAPI.m; sourceTree = "<group>"; };
 		D0AB2C9619280FA500913CC0 /* SocialMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0AB2C9919280FA500913CC0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D0AB2C9B19280FA500913CC0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -45,14 +55,19 @@
 		D0AB2CA819280FA500913CC0 /* JSTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSTAppDelegate.h; sourceTree = "<group>"; };
 		D0AB2CA919280FA500913CC0 /* JSTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSTAppDelegate.m; sourceTree = "<group>"; };
 		D0AB2CAC19280FA500913CC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D0AB2CAE19280FA500913CC0 /* JSTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSTViewController.h; sourceTree = "<group>"; };
-		D0AB2CAF19280FA500913CC0 /* JSTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSTViewController.m; sourceTree = "<group>"; };
 		D0AB2CB119280FA500913CC0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D0AB2CB719280FA500913CC0 /* SocialMusicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialMusicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0AB2CB819280FA500913CC0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D0AB2CC019280FA500913CC0 /* SocialMusicTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SocialMusicTests-Info.plist"; sourceTree = "<group>"; };
 		D0AB2CC219280FA500913CC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D0AB2CC419280FA500913CC0 /* SocialMusicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocialMusicTests.m; sourceTree = "<group>"; };
+		D0D6D0AD1928242D00BB3F0B /* JSTArtistInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSTArtistInfoViewController.h; sourceTree = "<group>"; };
+		D0D6D0AE1928251000BB3F0B /* JSTArtistAlbumListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTArtistAlbumListTableViewController.h; sourceTree = "<group>"; };
+		D0D6D0AF1928251000BB3F0B /* JSTArtistAlbumListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTArtistAlbumListTableViewController.m; sourceTree = "<group>"; };
+		D0D6D0B11928252D00BB3F0B /* JSTArtistSocialMentionsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTArtistSocialMentionsTableViewController.h; sourceTree = "<group>"; };
+		D0D6D0B21928252D00BB3F0B /* JSTArtistSocialMentionsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTArtistSocialMentionsTableViewController.m; sourceTree = "<group>"; };
+		D0DA9FD91928183A00789033 /* JSTAPIRequestsForwarding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTAPIRequestsForwarding.m; sourceTree = "<group>"; };
+		FFC8AC9E8BD144D6B279E990 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +78,7 @@
 				D0AB2C9C19280FA500913CC0 /* CoreGraphics.framework in Frameworks */,
 				D0AB2C9E19280FA500913CC0 /* UIKit.framework in Frameworks */,
 				D0AB2C9A19280FA500913CC0 /* Foundation.framework in Frameworks */,
+				89C43741D1794971A7BFFDE0 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +95,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D04B8CCF1928131B00D113D1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D04B8CCC1928131500D113D1 /* JSTArtistSearchViewController.h */,
+				D04B8CCD1928131500D113D1 /* JSTArtistSearchViewController.m */,
+				D0D6D0AD1928242D00BB3F0B /* JSTArtistInfoViewController.h */,
+				D0D6D0AE1928251000BB3F0B /* JSTArtistAlbumListTableViewController.h */,
+				D0D6D0AF1928251000BB3F0B /* JSTArtistAlbumListTableViewController.m */,
+				D0D6D0B11928252D00BB3F0B /* JSTArtistSocialMentionsTableViewController.h */,
+				D0D6D0B21928252D00BB3F0B /* JSTArtistSocialMentionsTableViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D04B8CD0192814BC00D113D1 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				D04B8CD11928155000D113D1 /* JSTMusicGraphAPI.h */,
+				D04B8CD21928155000D113D1 /* JSTMusicGraphAPI.m */,
+			);
+			name = APIs;
+			sourceTree = "<group>";
+		};
 		D0AB2C8D19280FA500913CC0 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +125,7 @@
 				D0AB2CBE19280FA500913CC0 /* SocialMusicTests */,
 				D0AB2C9819280FA500913CC0 /* Frameworks */,
 				D0AB2C9719280FA500913CC0 /* Products */,
+				339EED816E444851A3A36DEA /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +145,7 @@
 				D0AB2C9B19280FA500913CC0 /* CoreGraphics.framework */,
 				D0AB2C9D19280FA500913CC0 /* UIKit.framework */,
 				D0AB2CB819280FA500913CC0 /* XCTest.framework */,
+				FFC8AC9E8BD144D6B279E990 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -114,9 +155,10 @@
 			children = (
 				D0AB2CA819280FA500913CC0 /* JSTAppDelegate.h */,
 				D0AB2CA919280FA500913CC0 /* JSTAppDelegate.m */,
+				D0DA9FD91928183A00789033 /* JSTAPIRequestsForwarding.m */,
 				D0AB2CAB19280FA500913CC0 /* Main.storyboard */,
-				D0AB2CAE19280FA500913CC0 /* JSTViewController.h */,
-				D0AB2CAF19280FA500913CC0 /* JSTViewController.m */,
+				D04B8CCF1928131B00D113D1 /* ViewControllers */,
+				D04B8CD0192814BC00D113D1 /* APIs */,
 				D0AB2CB119280FA500913CC0 /* Images.xcassets */,
 				D0AB2CA019280FA500913CC0 /* Supporting Files */,
 			);
@@ -159,9 +201,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0AB2CC819280FA500913CC0 /* Build configuration list for PBXNativeTarget "SocialMusic" */;
 			buildPhases = (
+				1F62A444A77E4BBCB71CED92 /* Check Pods Manifest.lock */,
 				D0AB2C9219280FA500913CC0 /* Sources */,
 				D0AB2C9319280FA500913CC0 /* Frameworks */,
 				D0AB2C9419280FA500913CC0 /* Resources */,
+				CB457433BDB24A39B581A4EA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -245,14 +289,51 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1F62A444A77E4BBCB71CED92 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CB457433BDB24A39B581A4EA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D0AB2C9219280FA500913CC0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0AB2CB019280FA500913CC0 /* JSTViewController.m in Sources */,
 				D0AB2CAA19280FA500913CC0 /* JSTAppDelegate.m in Sources */,
+				D04B8CCE1928131500D113D1 /* JSTArtistSearchViewController.m in Sources */,
+				D0D6D0B31928252D00BB3F0B /* JSTArtistSocialMentionsTableViewController.m in Sources */,
+				D0D6D0B01928251000BB3F0B /* JSTArtistAlbumListTableViewController.m in Sources */,
 				D0AB2CA619280FA500913CC0 /* main.m in Sources */,
+				D04B8CD31928155000D113D1 /* JSTMusicGraphAPI.m in Sources */,
+				D0DA9FDA1928183A00789033 /* JSTAPIRequestsForwarding.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +455,7 @@
 		};
 		D0AB2CC919280FA500913CC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 339EED816E444851A3A36DEA /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -387,6 +469,7 @@
 		};
 		D0AB2CCA19280FA500913CC0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 339EED816E444851A3A36DEA /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -457,6 +540,7 @@
 				D0AB2CCA19280FA500913CC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D0AB2CCB19280FA500913CC0 /* Build configuration list for PBXNativeTarget "SocialMusicTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +549,7 @@
 				D0AB2CCD19280FA500913CC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

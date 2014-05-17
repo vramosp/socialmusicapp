@@ -1,5 +1,5 @@
 //
-//  JSTViewController.h
+//  JSTArtistSearchViewController.h
 //  SocialMusic
 //
 //  Created by Javier Soto on 5/17/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JSTViewController : UIViewController
+@interface JSTArtistSearchViewController : UIViewController
 
 @end
