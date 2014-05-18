@@ -41,6 +41,7 @@
   dispatch_once(&onceToken, ^{
     mappingDictionary = @{
                           @"api.musicgraph.com" : @"musicgraph-083ba6881b1c.my.apitools.com",
+                          @"api.twitter.com" : @"twitter-083ba6881b1c.my.apitools.com",
                           };
   });
 

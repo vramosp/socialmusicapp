@@ -11,6 +11,7 @@
 #import "JSTMusicGraphArtist.h"
 #import "JSTMusicGraphAlbum.h"
 
+// https://developer.musicgraph.com/api-docs/v2/artists
 static NSString *const JSTMusicGraphAPIKey = @"61d7a072516a19df3fa1f00e9a61040a";
 
 @implementation JSTMusicGraphAPI
