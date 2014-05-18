@@ -15,6 +15,7 @@
 
 @import Social;
 @import Accounts;
+@import Twitter;
 
 @interface JSTArtistSocialMentionsTableViewController ()
 
@@ -45,21 +46,24 @@
 
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
 
-    ACAccount *twitterAccount = [[ACAccountStore.new accountsWithAccountType:[ACAccountStore.new accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter]] firstObject];
-    STTwitterAPI *twitterAPI = [STTwitterAPI twitterAPIOSWithAccount:twitterAccount];
-    [twitterAPI getSearchTweetsWithQuery:self.artist.name successBlock:^(NSDictionary *searchMetadata, NSArray *statuses)
-     {
-       [MBProgressHUD hideHUDForView:self.view animated:YES];
+    STTwitterAPI *twitterAPI = [STTwitterAPI twitterAPIOSWithFirstAccount];
+    [twitterAPI verifyCredentialsWithSuccessBlock:^(NSString *username) {
+      [twitterAPI getSearchTweetsWithQuery:self.artist.name successBlock:^(NSDictionary *searchMetadata, NSArray *statuses)
+       {
+         [MBProgressHUD hideHUDForView:self.view animated:YES];
 
-       self.requestInProgress = NO;
-       self.tweets = statuses;
-       [self.tableView reloadData];
-     }
-                              errorBlock:^(NSError *error)
-     {
-       [MBProgressHUD hideHUDForView:self.view animated:YES];
-       self.requestInProgress = NO;
-     }];
+         self.requestInProgress = NO;
+         self.tweets = statuses;
+         [self.tableView reloadData];
+       }
+                                errorBlock:^(NSError *error)
+       {
+         [MBProgressHUD hideHUDForView:self.view animated:YES];
+         self.requestInProgress = NO;
+       }];
+    } errorBlock:^(NSError *error) {
+      NSLog(@"Error getting twitter account: %@", error);
+    }];
   }
 }
 
@@ -70,7 +74,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class]) forIndexPath:indexPath];
 
-//  cell.textLabel.text =
+  cell.textLabel.text = self.tweets[indexPath.row][@"text"];
+  cell.detailTextLabel.text = [NSString stringWithFormat:@"@%@", self.tweets[indexPath.row][@"user"][@"screen_name"]];
 
   return cell;
 }

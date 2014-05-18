@@ -28,7 +28,7 @@ static NSString *const PBArtistInfoModalSegueIdentifier = @"ArtistInfoModalSegue
 
 @end
 
-@interface JSTArtistSearchViewController () <MLPAutoCompleteTextFieldDataSource, MLPAutoCompleteTextFieldDelegate>
+@interface JSTArtistSearchViewController () <MLPAutoCompleteTextFieldDataSource, MLPAutoCompleteTextFieldDelegate, UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet MLPAutoCompleteTextField *textField;
 
@@ -52,6 +52,8 @@ static NSString *const PBArtistInfoModalSegueIdentifier = @"ArtistInfoModalSegue
   self.textField.reverseAutoCompleteSuggestionsBoldEffect = YES;
   self.textField.autoCompleteTableBackgroundColor = [UIColor whiteColor];
   self.textField.autoCompleteFetchRequestDelay = 0.5;
+
+  self.textField.delegate = self;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -64,6 +66,7 @@ static NSString *const PBArtistInfoModalSegueIdentifier = @"ArtistInfoModalSegue
 #pragma mark - MLPAutoCompleteTextFieldDataSource
 
 - (void)autoCompleteTextField:(MLPAutoCompleteTextField *)textField possibleCompletionsForString:(NSString *)string completionHandler:(void (^)(NSArray *))handler {
+  [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
   [[JSTMusicGraphAPI sharedInstance] searchArtistsWithName:string
                                            completionBlock:^(NSArray *artists, NSError *error)
   {
@@ -73,6 +76,8 @@ static NSString *const PBArtistInfoModalSegueIdentifier = @"ArtistInfoModalSegue
     else {
       NSLog(@"Error querying artists with name %@: %@", string, error);
     }
+
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
   }];
 }
 
@@ -85,6 +90,14 @@ static NSString *const PBArtistInfoModalSegueIdentifier = @"ArtistInfoModalSegue
   self.selectedArtist = selectedObject;
 
   [self performSegueWithIdentifier:PBArtistInfoModalSegueIdentifier sender:self];
+}
+
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+  [self.textField resignFirstResponder];
+
+  return YES;
 }
 
 @end
