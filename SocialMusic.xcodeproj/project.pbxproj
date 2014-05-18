@@ -27,6 +27,7 @@
 		D0D6D0B31928252D00BB3F0B /* JSTArtistSocialMentionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D6D0B21928252D00BB3F0B /* JSTArtistSocialMentionsTableViewController.m */; };
 		D0D6D0B619282AF100BB3F0B /* JSTMusicGraphArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D6D0B519282AF100BB3F0B /* JSTMusicGraphArtist.m */; };
 		D0D6D0B919282B1400BB3F0B /* JSTMusicGraphAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D6D0B819282B1400BB3F0B /* JSTMusicGraphAlbum.m */; };
+		D0D6D0C019283C9800BB3F0B /* JSTTweetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D6D0BF19283C9800BB3F0B /* JSTTweetCell.m */; };
 		D0DA9FDA1928183A00789033 /* JSTAPIRequestsForwarding.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DA9FD91928183A00789033 /* JSTAPIRequestsForwarding.m */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,8 @@
 		D0D6D0B519282AF100BB3F0B /* JSTMusicGraphArtist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTMusicGraphArtist.m; sourceTree = "<group>"; };
 		D0D6D0B719282B1400BB3F0B /* JSTMusicGraphAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTMusicGraphAlbum.h; sourceTree = "<group>"; };
 		D0D6D0B819282B1400BB3F0B /* JSTMusicGraphAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTMusicGraphAlbum.m; sourceTree = "<group>"; };
+		D0D6D0BE19283C9800BB3F0B /* JSTTweetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTTweetCell.h; sourceTree = "<group>"; };
+		D0D6D0BF19283C9800BB3F0B /* JSTTweetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTTweetCell.m; sourceTree = "<group>"; };
 		D0DA9FD91928183A00789033 /* JSTAPIRequestsForwarding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTAPIRequestsForwarding.m; sourceTree = "<group>"; };
 		FFC8AC9E8BD144D6B279E990 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -208,6 +211,8 @@
 		D0D6D0BA19282E4600BB3F0B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				D0D6D0BE19283C9800BB3F0B /* JSTTweetCell.h */,
+				D0D6D0BF19283C9800BB3F0B /* JSTTweetCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -355,6 +360,7 @@
 				D0D6D0B619282AF100BB3F0B /* JSTMusicGraphArtist.m in Sources */,
 				D0D6D0B01928251000BB3F0B /* JSTArtistAlbumListTableViewController.m in Sources */,
 				D0AB2CA619280FA500913CC0 /* main.m in Sources */,
+				D0D6D0C019283C9800BB3F0B /* JSTTweetCell.m in Sources */,
 				D04B8CD31928155000D113D1 /* JSTMusicGraphAPI.m in Sources */,
 				D0DA9FDA1928183A00789033 /* JSTAPIRequestsForwarding.m in Sources */,
 			);

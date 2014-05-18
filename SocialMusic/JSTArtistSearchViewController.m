@@ -28,7 +28,7 @@ static NSString *const PBArtistInfoModalSegueIdentifier = @"ArtistInfoModalSegue
 
 @end
 
-@interface JSTArtistSearchViewController () <MLPAutoCompleteTextFieldDataSource, MLPAutoCompleteTextFieldDelegate, UITextFieldDelegate>
+@interface JSTArtistSearchViewController () <MLPAutoCompleteTextFieldDataSource, MLPAutoCompleteTextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet MLPAutoCompleteTextField *textField;
 
@@ -52,8 +52,6 @@ static NSString *const PBArtistInfoModalSegueIdentifier = @"ArtistInfoModalSegue
   self.textField.reverseAutoCompleteSuggestionsBoldEffect = YES;
   self.textField.autoCompleteTableBackgroundColor = [UIColor whiteColor];
   self.textField.autoCompleteFetchRequestDelay = 0.5;
-
-  self.textField.delegate = self;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -90,14 +88,6 @@ static NSString *const PBArtistInfoModalSegueIdentifier = @"ArtistInfoModalSegue
   self.selectedArtist = selectedObject;
 
   [self performSegueWithIdentifier:PBArtistInfoModalSegueIdentifier sender:self];
-}
-
-#pragma mark - UITextFieldDelegate
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-  [self.textField resignFirstResponder];
-
-  return YES;
 }
 
 @end

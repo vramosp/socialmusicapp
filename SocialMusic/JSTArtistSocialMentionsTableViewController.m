@@ -10,6 +10,8 @@
 
 #import "JSTMusicGraphArtist.h"
 
+#import "JSTTweetCell.h"
+
 #import <MBProgressHUD/MBProgressHUD.h>
 #import <STTwitter/STTwitter.h>
 
@@ -72,10 +74,9 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class]) forIndexPath:indexPath];
+  JSTTweetCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([JSTTweetCell class]) forIndexPath:indexPath];
 
-  cell.textLabel.text = self.tweets[indexPath.row][@"text"];
-  cell.detailTextLabel.text = [NSString stringWithFormat:@"@%@", self.tweets[indexPath.row][@"user"][@"screen_name"]];
+  cell.tweet = self.tweets[indexPath.row];
 
   return cell;
 }
