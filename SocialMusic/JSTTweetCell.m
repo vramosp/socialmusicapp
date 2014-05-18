@@ -17,11 +17,17 @@
 
 @implementation JSTTweetCell
 
+- (void)awakeFromNib {
+  [super awakeFromNib];
+
+  self.tweetLabel.preferredMaxLayoutWidth = 290;
+}
+
 - (void)setTweet:(NSDictionary *)tweet {
   _tweet = [tweet copy];
 
-  self.usernameLabel.text = tweet[@"text"];
-  self.tweetLabel.text = [NSString stringWithFormat:@"@%@", tweet[@"user"][@"screen_name"]];
+  self.usernameLabel.text = [NSString stringWithFormat:@"@%@", tweet[@"user"][@"screen_name"]];
+  self.tweetLabel.text = tweet[@"text"];
 }
 
 @end

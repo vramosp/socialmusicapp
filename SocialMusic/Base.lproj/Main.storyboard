@@ -125,14 +125,14 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="@Javi:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1CD-Tc-NZm">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" misplaced="YES" text="@Javi:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1CD-Tc-NZm">
                                             <rect key="frame" x="20" y="20" width="49" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="42" translatesAutoresizingMaskIntoConstraints="NO" id="a1d-Kg-IPB">
-                                            <rect key="frame" x="20" y="49" width="42" height="21"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="290" translatesAutoresizingMaskIntoConstraints="NO" id="a1d-Kg-IPB">
+                                            <rect key="frame" x="20" y="49" width="290" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="highlightedColor"/>
@@ -142,7 +142,7 @@
                                         <constraint firstItem="1CD-Tc-NZm" firstAttribute="top" secondItem="qgv-7c-3Xb" secondAttribute="top" constant="20" id="8QM-uF-EJE"/>
                                         <constraint firstItem="a1d-Kg-IPB" firstAttribute="leading" secondItem="qgv-7c-3Xb" secondAttribute="leading" constant="20" id="CXN-8P-DiM"/>
                                         <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="a1d-Kg-IPB" secondAttribute="bottom" constant="10" id="HeG-nf-4Sh"/>
-                                        <constraint firstAttribute="trailing" secondItem="a1d-Kg-IPB" secondAttribute="trailing" constant="258" id="boT-ot-RRR"/>
+                                        <constraint firstAttribute="trailing" secondItem="a1d-Kg-IPB" secondAttribute="trailing" constant="10" id="boT-ot-RRR"/>
                                         <constraint firstItem="a1d-Kg-IPB" firstAttribute="top" secondItem="1CD-Tc-NZm" secondAttribute="bottom" constant="8" id="ocA-gt-D8c"/>
                                         <constraint firstItem="1CD-Tc-NZm" firstAttribute="leading" secondItem="qgv-7c-3Xb" secondAttribute="leading" constant="20" id="zzF-KH-mPP"/>
                                     </constraints>
