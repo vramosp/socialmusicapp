@@ -35,18 +35,26 @@ PODS:
     - libextobjc/RuntimeExtensions
   - libextobjc/RuntimeExtensions (0.4)
   - libextobjc/UmbrellaHeader (0.4)
+  - Mantle (1.5):
+    - Mantle/extobjc
+  - Mantle/extobjc (1.5)
+  - MBProgressHUD (0.8)
   - MLPAutoCompleteTextField (1.5)
   - STTwitter (0.1.2)
 
 DEPENDENCIES:
   - JSTAPIToolsURLProtocol (~> 1.0.0)
   - libextobjc
+  - Mantle
+  - MBProgressHUD
   - MLPAutoCompleteTextField (~> 1.5)
   - STTwitter
 
 SPEC CHECKSUMS:
   JSTAPIToolsURLProtocol: dd4700c50601463533e15b66430c3c4e876d1553
   libextobjc: 2c9fc8226f0f38e562587f65172f93f0c9b4a47a
+  Mantle: 60c03eea4d15a1c8d53821a56c7492cd6d05f553
+  MBProgressHUD: 2bbc6f470111daf7f3eaa4eb12b8cbf01c4c0622
   MLPAutoCompleteTextField: 8baf7b9a78cbc6022a50f985c1c56784248821fe
   STTwitter: b46bef092a1585abd1bdafc8b2b92048a37a14fc
 

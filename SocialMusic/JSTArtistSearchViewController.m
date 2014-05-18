@@ -12,6 +12,7 @@
 
 #import "JSTArtistInfoViewController.h"
 #import "JSTMusicGraphAPI.h"
+#import "JSTMusicGraphArtist.h"
 
 static NSString *const PBArtistInfoModalSegueIdentifier = @"ArtistInfoModalSegue";
 
@@ -54,8 +55,9 @@ static NSString *const PBArtistInfoModalSegueIdentifier = @"ArtistInfoModalSegue
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-  for (UIViewController <JSTArtistInfoViewController> *viewController in [segue.destinationViewController viewControllers]) {
-    viewController.artist = self.selectedArtist;
+  // This is horrible and I hate storyboards.
+  for (UINavigationController *viewController in [segue.destinationViewController viewControllers]) {
+    ((UIViewController <JSTArtistInfoViewController> *)viewController.topViewController).artist = self.selectedArtist;
   }
 }
 

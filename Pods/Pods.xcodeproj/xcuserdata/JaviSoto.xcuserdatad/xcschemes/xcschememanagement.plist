@@ -9,7 +9,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-MLPAutoCompleteTextField.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Mantle.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -32,27 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0913AB9E878E4365B4E0BC7D</key>
+		<key>010B20D8DE744791BE3F2E57</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3AFA320EF0F2484D94508189</key>
+		<key>0EF7265CAD594C4FA98BF8B0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5E85D1D74E8F4FFE91A042B6</key>
+		<key>1265410B42A04F38B192A575</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6DF0DF7E11D24BE08C73D948</key>
+		<key>1B43928E85444806B389BEB0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A8BF4C8D9AAA44D891674AE0</key>
+		<key>2B37A5A3E2194A5592D03246</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6334706994834276B967E3BD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B4E72D22AF5A459EBC9FC414</key>
 		<dict>
 			<key>primary</key>
 			<true/>

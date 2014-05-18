@@ -24,10 +24,13 @@
             <objects>
                 <tabBarController definesPresentationContext="YES" id="hEg-qf-mbg" sceneMemberID="viewController">
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="afS-G1-NXB">
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="afS-G1-NXB">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.40000000596046448" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="1" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="0.40000000596046448" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="3f0-Qc-ZtR" kind="relationship" relationship="viewControllers" id="0fx-8g-j8a"/>
@@ -38,21 +41,37 @@
             </objects>
             <point key="canvasLocation" x="-373" y="704"/>
         </scene>
-        <!--Artist Album List Table View Controller - Root View Controller-->
+        <!--Artist Album List Table View Controller - Albums-->
         <scene sceneID="CmU-B4-g4I">
             <objects>
                 <tableViewController id="Kdr-cm-iuQ" customClass="JSTArtistAlbumListTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="YmZ-t9-aX2">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="xiq-St-zn7">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UITableViewCell" textLabel="oUO-Zr-Pdk" detailTextLabel="oZs-2e-OfU" rowHeight="100" style="IBUITableViewCellStyleValue1" id="xiq-St-zn7">
+                                <rect key="frame" x="0.0" y="22" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xiq-St-zn7" id="aXp-Sf-LwI">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oUO-Zr-Pdk">
+                                            <rect key="frame" x="15" y="39" width="33" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oZs-2e-OfU">
+                                            <rect key="frame" x="261" y="39" width="44" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -61,19 +80,26 @@
                             <outlet property="delegate" destination="Kdr-cm-iuQ" id="syR-HW-duy"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="OtO-AL-cM5"/>
+                    <navigationItem key="navigationItem" title="Albums" id="OtO-AL-cM5">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="E9H-es-0Uh">
+                            <connections>
+                                <action selector="dismissModal:" destination="Kdr-cm-iuQ" id="NsW-aM-mng"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LoT-W9-qOe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="581" y="752"/>
         </scene>
-        <!--Navigation Controller - Item-->
+        <!--Navigation Controller - Albums-->
         <scene sceneID="JDk-xw-xEU">
             <objects>
                 <navigationController definesPresentationContext="YES" id="3f0-Qc-ZtR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="HUT-w3-4zR"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fqB-3I-Znf">
+                    <tabBarItem key="tabBarItem" title="Albums" id="HUT-w3-4zR"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="fqB-3I-Znf">
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.70602354415221169" blue="0.38072478035351287" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="Kdr-cm-iuQ" kind="relationship" relationship="rootViewController" id="3hD-jH-BoV"/>
@@ -83,17 +109,17 @@
             </objects>
             <point key="canvasLocation" x="135" y="704"/>
         </scene>
-        <!--Artist Social Mentions Table View Controller - Root View Controller-->
+        <!--Artist Social Mentions Table View Controller - Tweets-->
         <scene sceneID="kYC-Xi-oHJ">
             <objects>
                 <tableViewController id="pSX-KY-Bw8" customClass="JSTArtistSocialMentionsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="xxY-K0-wDC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="gIB-hS-n6q">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gIB-hS-n6q" id="qgv-7c-3Xb">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -106,19 +132,26 @@
                             <outlet property="delegate" destination="pSX-KY-Bw8" id="6oL-0g-F1j"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="fSf-UL-uTG"/>
+                    <navigationItem key="navigationItem" title="Tweets" id="fSf-UL-uTG">
+                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="done" id="hEw-jT-FkR">
+                            <connections>
+                                <action selector="dismiss:" destination="pSX-KY-Bw8" id="r1p-ng-CC5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7zs-IM-Ec6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-48" y="1479"/>
         </scene>
-        <!--Navigation Controller - Item-->
+        <!--Navigation Controller - Tweets-->
         <scene sceneID="3Cy-8Z-Xwc">
             <objects>
                 <navigationController definesPresentationContext="YES" id="6Ng-TH-HSx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="HMK-sC-AbP"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6w2-os-zMm">
+                    <tabBarItem key="tabBarItem" title="Tweets" id="HMK-sC-AbP"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="6w2-os-zMm">
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.41165959359999998" green="0.61040139979999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="pSX-KY-Bw8" kind="relationship" relationship="rootViewController" id="Bsk-bt-VBO"/>
@@ -168,7 +201,7 @@
                     <navigationItem key="navigationItem" id="ios-Ju-GWo"/>
                     <connections>
                         <outlet property="textField" destination="aI9-3o-oWX" id="B0K-5v-yD7"/>
-                        <segue destination="hEg-qf-mbg" kind="modal" identifier="ArtistInfoModalSegue" id="edI-LI-uxt"/>
+                        <segue destination="hEg-qf-mbg" kind="modal" identifier="ArtistInfoModalSegue" modalTransitionStyle="flipHorizontal" id="edI-LI-uxt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UMF-sD-PIU" userLabel="First Responder" sceneMemberID="firstResponder"/>

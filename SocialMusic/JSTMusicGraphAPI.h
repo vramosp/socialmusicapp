@@ -8,11 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface JSTMusicGraphArtist : NSObject
-
-@property (nonatomic, copy, readonly) NSString *name;
-
-@end
+@class JSTMusicGraphArtist;
+@class JSTMusicGraphAlbum;
 
 @interface JSTMusicGraphAPI : NSObject
 
@@ -25,5 +22,13 @@
  */
 - (void)searchArtistsWithName:(NSString *)artistName
               completionBlock:(void(^)(NSArray *artists, NSError *error))completionBlock;
+
+/**
+ Query the Music Graph API and get a list of albums from the artist `artist`.
+
+ @param completionBlock `artists` type is `JSTMusicGraphAlbum`
+ */
+- (void)getAlbumsFromArtist:(JSTMusicGraphArtist *)artist
+            completionBlock:(void(^)(NSArray *albums, NSError *error))completionBlock;
 
 @end

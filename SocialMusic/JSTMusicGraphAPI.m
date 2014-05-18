@@ -8,13 +8,10 @@
 
 #import "JSTMusicGraphAPI.h"
 
+#import "JSTMusicGraphArtist.h"
+#import "JSTMusicGraphAlbum.h"
+
 static NSString *const JSTMusicGraphAPIKey = @"61d7a072516a19df3fa1f00e9a61040a";
-
-@interface JSTMusicGraphArtist ()
-
-+ (instancetype)artistWithName:(NSString *)artistName;
-
-@end
 
 @implementation JSTMusicGraphAPI
 
@@ -36,7 +33,7 @@ static NSString *const JSTMusicGraphAPIKey = @"61d7a072516a19df3fa1f00e9a61040a"
 - (void)getPath:(NSString *)path
  withParameters:(NSDictionary *)parametersDictionary
 completionBlock:(void(^)(NSDictionary *response, NSError *error))completionBlock {
-  NSMutableDictionary *parameters = [parametersDictionary mutableCopy];
+  NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithDictionary:parametersDictionary];
   parameters[@"api_key"] = JSTMusicGraphAPIKey;
 
   NSMutableString *urlString = [NSMutableString stringWithFormat:@"%@/%@", [self baseURLString], path];
@@ -75,27 +72,32 @@ completionBlock:^(NSDictionary *response, NSError *error)
        return;
      }
 
-     NSMutableArray *artists = [NSMutableArray array];
-     for (NSDictionary *responseItem in response[@"data"]) {
-       NSString *name = responseItem[@"name"];
-       [artists addObject:[JSTMusicGraphArtist artistWithName:name]];
-     }
+     NSError *error2 = nil;
+     NSArray *artists = [MTLJSONAdapter modelsOfClass:[JSTMusicGraphArtist class] fromJSONArray:response[@"data"] error:&error2];
 
-     completionBlock(artists,  nil);
+     completionBlock(artists,  error2);
    }];
 }
 
-@end
+- (void)getAlbumsFromArtist:(JSTMusicGraphArtist *)artist
+            completionBlock:(void(^)(NSArray *albums, NSError *error))completionBlock {
+  NSParameterAssert(artist);
+  NSParameterAssert(completionBlock);
 
+  [self getPath:[NSString stringWithFormat:@"artist/%@/albums", artist.artistID]
+ withParameters:nil
+completionBlock:^(NSDictionary *response, NSError *error)
+   {
+     if (error) {
+       completionBlock(nil, error);
+       return;
+     }
 
-@implementation JSTMusicGraphArtist
+     NSError *error2 = nil;
+     NSArray *albums = [MTLJSONAdapter modelsOfClass:[JSTMusicGraphAlbum class] fromJSONArray:response[@"data"] error:&error2];
 
-+ (instancetype)artistWithName:(NSString *)artistName {
-  JSTMusicGraphArtist *artist = [[self alloc] init];
-
-  artist->_name = [artistName copy];
-
-  return artist;
+     completionBlock(albums,  error2);
+   }];
 }
 
 @end

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3AFA320EF0F2484D94508189"
+               BlueprintIdentifier = "2B37A5A3E2194A5592D03246"
                BuildableName = "libPods-JSTAPIToolsURLProtocol.a"
                BlueprintName = "Pods-JSTAPIToolsURLProtocol"
                ReferencedContainer = "container:Pods.xcodeproj">

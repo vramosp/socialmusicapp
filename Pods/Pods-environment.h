@@ -12,11 +12,29 @@
 #define COCOAPODS_VERSION_MINOR_JSTAPIToolsURLProtocol 0
 #define COCOAPODS_VERSION_PATCH_JSTAPIToolsURLProtocol 0
 
+// MBProgressHUD
+#define COCOAPODS_POD_AVAILABLE_MBProgressHUD
+#define COCOAPODS_VERSION_MAJOR_MBProgressHUD 0
+#define COCOAPODS_VERSION_MINOR_MBProgressHUD 8
+#define COCOAPODS_VERSION_PATCH_MBProgressHUD 0
+
 // MLPAutoCompleteTextField
 #define COCOAPODS_POD_AVAILABLE_MLPAutoCompleteTextField
 #define COCOAPODS_VERSION_MAJOR_MLPAutoCompleteTextField 1
 #define COCOAPODS_VERSION_MINOR_MLPAutoCompleteTextField 5
 #define COCOAPODS_VERSION_PATCH_MLPAutoCompleteTextField 0
+
+// Mantle
+#define COCOAPODS_POD_AVAILABLE_Mantle
+#define COCOAPODS_VERSION_MAJOR_Mantle 1
+#define COCOAPODS_VERSION_MINOR_Mantle 5
+#define COCOAPODS_VERSION_PATCH_Mantle 0
+
+// Mantle/extobjc
+#define COCOAPODS_POD_AVAILABLE_Mantle_extobjc
+#define COCOAPODS_VERSION_MAJOR_Mantle_extobjc 1
+#define COCOAPODS_VERSION_MINOR_Mantle_extobjc 5
+#define COCOAPODS_VERSION_PATCH_Mantle_extobjc 0
 
 // STTwitter
 #define COCOAPODS_POD_AVAILABLE_STTwitter
