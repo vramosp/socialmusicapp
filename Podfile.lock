@@ -1,5 +1,4 @@
 PODS:
-  - JSTAPIToolsURLProtocol (1.0.0)
   - libextobjc (0.4):
     - libextobjc/EXTADT
     - libextobjc/EXTConcreteProtocol
@@ -43,7 +42,6 @@ PODS:
   - STTwitter (0.1.2)
 
 DEPENDENCIES:
-  - JSTAPIToolsURLProtocol (~> 1.0.0)
   - libextobjc
   - Mantle
   - MBProgressHUD
@@ -51,11 +49,10 @@ DEPENDENCIES:
   - STTwitter
 
 SPEC CHECKSUMS:
-  JSTAPIToolsURLProtocol: dd4700c50601463533e15b66430c3c4e876d1553
-  libextobjc: 2c9fc8226f0f38e562587f65172f93f0c9b4a47a
-  Mantle: 60c03eea4d15a1c8d53821a56c7492cd6d05f553
-  MBProgressHUD: 2bbc6f470111daf7f3eaa4eb12b8cbf01c4c0622
-  MLPAutoCompleteTextField: 8baf7b9a78cbc6022a50f985c1c56784248821fe
-  STTwitter: b46bef092a1585abd1bdafc8b2b92048a37a14fc
+  libextobjc: ba42e4111f433273a886cd54f0ddaddb7f62f82f
+  Mantle: c67a7e45e14196ed42b2a7cbb98ff6a9920e6b92
+  MBProgressHUD: c356980b0cd097f19acec959b49dca5eb8ec31be
+  MLPAutoCompleteTextField: 5e440aa7b139258f779db3375dd486421959be15
+  STTwitter: 88af2fa2eae850b8075a247b8b4fa5563c803b0e
 
-COCOAPODS: 0.32.1
+COCOAPODS: 0.33.1

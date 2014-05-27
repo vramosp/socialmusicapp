@@ -268,7 +268,7 @@
 				ORGANIZATIONNAME = "Javier Soto";
 				TargetAttributes = {
 					D0AB2C9519280FA500913CC0 = {
-						DevelopmentTeam = 6V6XY979JQ;
+						DevelopmentTeam = BMS3SKN2H6;
 					};
 					D0AB2CB619280FA500913CC0 = {
 						TestTargetID = D0AB2C9519280FA500913CC0;
@@ -493,8 +493,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SocialMusic/SocialMusic-Prefix.pch";
 				INFOPLIST_FILE = "SocialMusic/SocialMusic-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "F74EA194-C582-4F5C-8884-AC97754417B8";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -510,8 +511,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SocialMusic/SocialMusic-Prefix.pch";
 				INFOPLIST_FILE = "SocialMusic/SocialMusic-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "F74EA194-C582-4F5C-8884-AC97754417B8";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
