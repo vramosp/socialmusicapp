@@ -42,7 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		339EED816E444851A3A36DEA /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		B16E3DDEA450BA451435AD48 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		BAAF12D584F4412D5CD2699F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D04B8CCC1928131500D113D1 /* JSTArtistSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTArtistSearchViewController.h; sourceTree = "<group>"; };
 		D04B8CCD1928131500D113D1 /* JSTArtistSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTArtistSearchViewController.m; sourceTree = "<group>"; };
 		D04B8CD11928155000D113D1 /* JSTMusicGraphAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTMusicGraphAPI.h; sourceTree = "<group>"; };
@@ -139,7 +140,7 @@
 				D0AB2CBE19280FA500913CC0 /* SocialMusicTests */,
 				D0AB2C9819280FA500913CC0 /* Frameworks */,
 				D0AB2C9719280FA500913CC0 /* Products */,
-				339EED816E444851A3A36DEA /* Pods.xcconfig */,
+				E08BF7CA17CAA0DBE86263E4 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -215,6 +216,15 @@
 				D0D6D0BF19283C9800BB3F0B /* JSTTweetCell.m */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		E08BF7CA17CAA0DBE86263E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B16E3DDEA450BA451435AD48 /* Pods.debug.xcconfig */,
+				BAAF12D584F4412D5CD2699F /* Pods.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,7 +353,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -484,7 +494,7 @@
 		};
 		D0AB2CC919280FA500913CC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 339EED816E444851A3A36DEA /* Pods.xcconfig */;
+			baseConfigurationReference = B16E3DDEA450BA451435AD48 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -493,7 +503,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SocialMusic/SocialMusic-Prefix.pch";
 				INFOPLIST_FILE = "SocialMusic/SocialMusic-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -502,7 +512,7 @@
 		};
 		D0AB2CCA19280FA500913CC0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 339EED816E444851A3A36DEA /* Pods.xcconfig */;
+			baseConfigurationReference = BAAF12D584F4412D5CD2699F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -511,7 +521,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SocialMusic/SocialMusic-Prefix.pch";
 				INFOPLIST_FILE = "SocialMusic/SocialMusic-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
